@@ -24,6 +24,8 @@ def emotion_analyzer():
     sadness = response["sadness"]
     dominant_emotion = response["dominant_emotion"]
 
+    if dominant_emotion is None:
+        return "Invalid text! Please try again!"
     # Format the output
     return (
         f"For the given statement, the system response is "
